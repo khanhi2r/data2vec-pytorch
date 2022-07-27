@@ -1,5 +1,5 @@
 modality: 'text'
-device: 'cuda'
+device: 'mps'
 train:
   batch_size: 32
   num_epochs: 20
