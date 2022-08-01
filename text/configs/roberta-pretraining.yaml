@@ -1,5 +1,6 @@
 modality: 'text'
 device: 'cpu'
+num_jobs: 32
 train:
   batch_size: 32
   num_epochs: 20

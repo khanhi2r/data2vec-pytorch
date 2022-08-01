@@ -24,8 +24,7 @@ if __name__ == '__main__':
     assert modality in trainers_dict.keys(), f'invalid modality `{cfg.modality}`, expected {list(trainers_dict.keys())}'
     trainer = trainers_dict[modality](cfg)
 
-    import multiprocessing as mp
-    torch.set_num_threads(mp.cpu_count())
-    torch.set_num_interop_threads(mp.cpu_count())
+    torch.set_num_threads(cfg.num_jobs)
+    torch.set_num_interop_threads(cfg.num_jobs)
 
     trainer.train()
